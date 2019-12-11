@@ -21,8 +21,7 @@ import { ViewAssociateSkillsComponent } from './pages/view-associate-skills/view
 import { UserProfileComponent } from './pages/user-profile/user-profile.component';
 import { UpdateAssoSkillsComponent } from './pages/update-asso-skills/update-asso-skills.component';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
-import { ForgotPassword1Component } from './pages/forgot-password1/forgot-password1.component';
-import { PingComponent } from './pages/ping/ping.component';
+
 
 
 const routes: Routes =[
@@ -86,18 +85,9 @@ const routes: Routes =[
 }, {
   path:'forgotPassword',
   component:ForgotPasswordComponent,
-  canActivate:[CanActivateGuardService]
-},
-{
-  path:'forgotPassword1',
-  component:ForgotPassword1Component,
-  canActivate:[CanActivateGuardService]
-},
-{
-  path:'ping',
-  component:PingComponent,
-  canActivate:[CanActivateGuardService]
+  // canActivate:[CanActivateGuardService]
 }
+
 // {
 //   path:'dashboard',
 //   component:DashboardComponent,

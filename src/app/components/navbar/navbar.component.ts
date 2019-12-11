@@ -53,7 +53,7 @@ export class NavbarComponent implements OnInit {
     }else{
       console.log("this is lse block dosednt got to admin")
       this.AssociateService.getAssociatebyId(iid).subscribe(response=>{
-
+console.log(response)
         this.associate= response;
       })
       this.admin="employee"
@@ -61,19 +61,7 @@ export class NavbarComponent implements OnInit {
     }
 
   }
-  getTitle(){
-    var titlee = this.location.prepareExternalUrl(this.location.path());
-    if(titlee.charAt(0) === '#'){
-        titlee = titlee.slice( 1 );
-    }
-
-    for(var item = 0; item < this.listTitles.length; item++){
-        if(this.listTitles[item].path === titlee){
-            return this.listTitles[item].title;
-        }
-    }
-    return 'Dashboard';
-  }
+  
 
   logout(){
     sessionStorage.removeItem('type')
